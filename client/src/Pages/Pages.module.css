@@ -1,0 +1,76 @@
+/* add css to the main div */
+.login_main_div{
+  width: 100%;
+  overflow-y: hidden;
+
+
+}
+
+.login_main_div > a{
+  width: 100%;
+  overflow-y: hidden;
+
+}
+
+/* add css to the form section */
+.form_section{
+  background-color: #fff;
+  width: 10%;
+  height: 80vh;
+  margin-top: 10%;
+  padding-left: 15%;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+   
+
+}
+
+.form_section input{
+  padding: 20px;
+}
+
+/* add css to the button section */
+.btn button{
+  text-align: center;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+/*  */
+.register{
+  text-align: center;
+}
+
+
+/* add css to login_left_section */
+.login_left_section{
+  padding-top: 20%;
+  
+}
+
+.login_left_section h2{
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+
+/* style help button */
+.help{
+  background-color: orange;
+  width: 70%;
+  margin-left: 15%;
+  color: white;
+  font-weight: 600;
+
+}
+
+
+
+/* style register form */
+.register_head_section{
+  padding-left: 20px;
+  font-size: 1.7em;
+  
+}
+

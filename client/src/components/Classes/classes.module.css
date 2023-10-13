@@ -1,0 +1,225 @@
+* {
+  box-sizing: border-box;
+}
+
+.trapezoidClasses {
+  margin:0;
+  padding:0;
+  width: 100%;
+  height: 150vh;
+  background-color: #0c2735;
+  clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+}
+
+.CardContainerTitle {
+  overflow: hidden;
+}
+
+.classesTitle {
+  display: flex;
+  position: relative;
+  left: 10%;
+  top: 18%;
+  font-size: 4em;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.FirstLetterEffect {
+  border-bottom: 5px solid rgba(255, 255, 255, 0.6);
+  padding-bottom: 5px;
+  overflow: hidden;
+}
+
+/*Mobile View*/
+@media (max-width: 768px) {
+  .trapezoidClasses {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .CardContainer {
+    position: relative;
+    top: 25%;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+  }
+
+
+  .classesTitle {
+    font-size: 36px;
+  }
+
+  .classesTitle {
+    left: 5%;
+    top: 16%;
+  }
+
+  .FirstLetterEffect {
+    padding-bottom: 2px;
+  }
+
+  .classesVideoCard:not(:active) {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .classesVideoCard:active {
+    transition: 0.1s;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(1, 1, 1, 0.2);
+  }
+
+  .CardContainerTitle {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(1, 1, 1, 0.2);
+    margin-bottom: 20px;
+  }
+
+  .cardImage {
+    position: relative;
+    top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    margin-bottom: 20px;
+    width: 40%;
+  }
+
+  .CardContainerText {
+    display: none;
+  }
+
+  .CardContainerButton {
+    font-size: 14px;
+    background-color: #2139b0;
+    box-shadow: 2px 2px 5px rgba(1, 1, 1, 0.3);
+  }
+  .CardContainerButton:hover {
+    transition: 0.1s;
+    font-weight: bold;
+    transform: scale(1.1);
+    background-color: rgba(43, 73, 181, 0.7);
+    box-shadow: 0 0 10px rgba(1, 1, 1, 0.2);
+  }
+
+}
+
+/*Destop View*/
+@media (min-width: 768px) {
+  .CardContainer {
+    position: relative;
+    top: 26%;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .classesVideoCard {
+    height: 60vh;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .classesVideoCard:hover {
+    transition: 0.5s;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(1, 1, 1, 0.2);
+  }
+
+  .CardContainerTitle {
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(1, 1, 1, 0.2);
+    margin-bottom: 20px;
+  }
+
+  .cardImage {
+    position: relative;
+    top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    margin-bottom: 20px;
+    width: 20%;
+  }
+
+  .CardContainerText {
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    font-weight: 400;
+  }
+
+  .CardContainerButton {
+    box-shadow: 2px 2px 5px rgba(1, 1, 1, 0.3);
+    text-align: center;
+    width:30%;
+    padding-bottom: 10px;
+  }
+
+  .CardContainerButton:hover {
+    transition: 0.2s;
+    font-weight: semi-bold;
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 720px){
+.CardContainer {
+    position: relative;
+    top: 26%;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  
+  .CardContainerTitle {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(1, 1, 1, 0.2);
+    margin-bottom: 15px;
+  }
+
+  .CardContainerText {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  .classesVideoCard {
+    height: 30vh;
+    width: 26vh;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .CardContainerButton {
+    box-shadow: 2px 2px 5px rgba(1, 1, 1, 0.3);
+    text-align: center;
+    width:100%;
+  }   
+  .cardImage {
+    position: relative;
+    top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    margin-bottom: 15px;
+    width: 30%;
+  }
+
+}

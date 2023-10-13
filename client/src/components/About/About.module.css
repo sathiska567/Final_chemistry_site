@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(250, 250, 249,0.3);
+}
+.trapezoidClasses {
+    margin:0;
+    padding:0;
+    width: 100%;
+    height: 128vh;
+    clip-path: polygon(0% 0%, 100.1% 8%, 100.1% 90.8%, 0% 100.3%);
+  }
+
+  .classesTitle {
+    display: flex;
+    position: relative;
+    left: 10%;
+    top: 5%;
+    font-size: 4em;
+    color: rgba(0,0,128 ,0.9);
+    text-shadow: 0 0 10px rgba(199, 207, 255, 0.9);
+  }
+
+  .FirstLetterEffect {
+    border-bottom: 5px solid rgba(116, 133, 198, 0.6);
+    padding-bottom: 5px;
+    overflow: hidden;
+  }
+  
+  .Carousel {
+    position: relative;
+    top: 8%;
+    margin-left:auto;
+    margin-right:auto;
+    width:85%;
+    height: 90vh;
+  }
+
+  .carousalImage {
+    height:82vh;
+    width: 100%;
+    trasition: 0.5s;
+    filter: contrast(100%) brightness(0.9);
+  }
+
+  @media (max-width: 768px) {
+    .trapezoidClasses {
+        height: 80vh;
+    }
+
+    .classesTitle {
+        position: relative;
+        font-size: 36px;
+        left: 5%;
+        top: 8%;
+      }
+
+      .FirstLetterEffect {
+        padding-bottom: 2px;
+      }
+
+      .Carousel {
+        position: relative;
+        top: 12%;
+        margin-left:auto;
+        margin-right:auto;
+        width:100%;
+        height: 55vh;
+      }
+
+      .carousalImage {
+        height:55vh;
+        width: 100%;
+        filter: contrast(100%) brightness(1.0);
+      }
+
+  }
+
+
+  @media (min-width: 1281px) {
+    .carousalImage:hover {
+        filter: contrast(100%) brightness(1.0);
+      }
+  }

@@ -1,0 +1,27 @@
+.ClassDetails_main_div{
+  background-color: #1877F2;
+  clip-path: polygon(0 0, 100% 4%, 100% 96%, 0% 100%);
+  padding: 3%;
+}
+
+.ClassDetails_main_div_header{
+  /* background-color: red; */
+  color: #fff;
+
+}
+
+.icon img{
+  width: 5px;
+  padding-right: 30px;
+}
+
+
+.ClassDetails_main_div_header::first-letter{
+  border-bottom: 3px solid #fff;
+}
+
+.ClassDetails_main_div img{
+  width: 150%;
+  height: 100%;
+  background-repeat: repeat;
+}

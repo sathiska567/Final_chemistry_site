@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+.mainContainer {
+  height: 50px;
+  padding-bottom: 20px;
+  margin-top: 10px;
+}
+
+.navbar-toggler-icon {
+  width: 20px;
+  height: 30px;
+}
+
+.navbar-toggler {
+  margin-right: 10px;
+}
+
+.navbar-toggler:active,
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.2);
+}
+
+.LinkContainer {
+  overflow: hidden;
+  margin-top: 10px;
+  height: 50px;
+}
+
+.loginBtn,
+.RegisterBtn {
+  width: auto;
+  height: 40px;
+  padding: 3px 10px;
+  box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.1);
+  border: 1px;
+}
+
+.loginBtn {
+  width: 80px;
+  background-color: rgba(24, 119, 242, 0.4);
+}
+
+.loginBtn:hover {
+  background-color: rgba(24, 119, 242, 0.3);
+}
+
+.RegisterBtn {
+  width: 100px;
+  background-color: #015c92;
+  color: white;
+}
+
+.RegisterBtn:hover {
+  background-color: rgba(1, 92, 146, 0.8);
+}
+
+.navLinks {
+  font-size: 18px;
+  width: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.navLinks:hover {
+  color: rgba(1, 92, 146, 0.8);
+  border-bottom: 3px solid rgba(1, 92, 146, 0.2);
+  font-weight: bold;
+  transform: scale(1.2);
+}
+
+/*Destop Devices*/
+@media (min-width: 992px) {
+  .loginBtn {
+    color: rgb(0, 0, 139);
+    font-weight: 500;
+    margin-left: 10px;
+  }
+  .RegisterBtn {
+    margin-left: 20px;
+    font-weight: 500;
+  }
+}
+
+/*Mobile Devices*/
+@media (max-width: 992px) {
+  .loginBtn,
+  .RegisterBtn {
+    margin-left: auto;
+    margin-right: auto;
+    align-item: center;
+    width: 80%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .loginBtn {
+    margin-top: 15px;
+  }
+
+  .loginBtn:hover {
+    font-weight: bold;
+  }
+
+  .RegisterBtn {
+    margin-top: 10px;
+  }
+
+  .RegisterBtn:hover {
+    font-weight: bold;
+  }
+
+  .navLinks {
+    height: auto;
+    padding: 15px;
+    box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .navLinks:hover {
+    width: 70%;
+    font-weight: bold;
+  }
+
+  .navbar-toggler {
+    margin:10px;
+  }
+
+  .navbar-toggler-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .mainContainer {
+    height: auto;
+    margin-top: 0px;
+  }
+
+  .LinkContainer {
+    overflow: hidden;
+    margin-top: 10px;
+    height: auto;
+  }
+  
+}

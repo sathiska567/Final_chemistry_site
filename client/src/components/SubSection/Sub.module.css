@@ -1,0 +1,23 @@
+/* add css to login_left_section */
+.login_left_section{
+  padding-top: 20%;
+  overflow-y: hidden;
+  
+}
+
+.login_left_section h2{
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+  overflow-y: hidden;
+}
+
+
+/* style help button */
+.help{
+  background-color: orange;
+  width: 70%;
+  margin-left: 15%;
+  color: white;
+  font-weight: 600;
+  
+}
