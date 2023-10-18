@@ -23,6 +23,10 @@ const Login = () => {
 
     try {
 
+      if(!name || !email || !password){
+           setMessage("All fields are required.please fill all fields")
+      }
+
       console.log(name,email,password);
       const response = await axios.post('http://localhost:8080/api/v1/auth/register',{ name :name, email:email, password:password })
       console.log(response.data);
@@ -32,9 +36,8 @@ const Login = () => {
 
       setMessage(response.data.message)
       history('/login')
-      alert("Registration successful")
 
-      return _id
+      alert("Registration successful")
 
     } 
     
@@ -63,7 +66,6 @@ const Login = () => {
                       className={`form-control`} 
                       name='name' 
                       placeholder='Enter your name' 
-                      required 
                       onChange={(e) => setName(e.target.value)} 
                     />
                   </div>
@@ -75,7 +77,7 @@ const Login = () => {
                       className={`form-control`} 
                       name='email' 
                       placeholder='Enter your email' 
-                      required 
+                      // required 
                       onChange={(e) => setEmail(e.target.value)} 
                     />
                   </div>
@@ -87,14 +89,14 @@ const Login = () => {
                       className={`form-control`} 
                       name='password' 
                       placeholder="Enter password" 
-                      required 
+                      // required 
                       value={password} 
                       onChange={(e) => setPassword(e.target.value)} 
                     /><br />
                     <input type="checkbox" onClick={ShowPassword} /> Show Password
-                  </div>
-                  <p>{message}</p>
-                </div><br />
+                  </div><br />
+                  <p style={{color:"red",paddingLeft:"10px"}}>{message}</p>
+                </div>
                
                 <div className={`form-group`}>
                   <div className={`col-sm-offset-2 col-sm-10 ${style.btn}`}>
