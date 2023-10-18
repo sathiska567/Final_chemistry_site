@@ -1,32 +1,34 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-import { database } from "../config/FirebaseConfig"
-import { signInWithEmailAndPassword } from "firebase/auth"
 import { Link, useNavigate } from 'react-router-dom';
 import style from "./Pages.module.css"
 import Button from '../components/Button/Button';
 import Sub from '../components/SubSection/Sub';
-import Input from '../components/InputField/Input';
+import axios from 'axios';
 
 const Login = () => {
   const [passwordVisible, setPasswordVisible] = useState(false)
-
-
+  const [email , setEmail] = useState('')
+  const [password , setPassword] = useState('')
+  const [message , setMessage] = useState('')
   const history = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = async(e) => {
+    e.preventDefault()
 
-    const email = e.target.email.value;
-    const password = e.target.password.value;
+    console.log(email , password);
 
-    signInWithEmailAndPassword(database, email, password).then(data => {
-      console.log(data, "Authdata");
-      alert("successfull Login")
-      history("/")
-    }).catch(error => {
-      alert(error)
-    })
+    try {
+      const response = await axios.post('http://localhost:8080/api/v1/auth/login' , {email : email , password : password})
+      console.log(response.data);
+      setMessage(response.data.message)
+      history('/')
+    } 
+    
+    catch (error) {
+       console.log(error);
+       alert(error)
+    }   
 
   }
 
@@ -56,18 +58,27 @@ const Login = () => {
 
 
                 <h5>දැනටමත් ලියාපදිංචි සිසුවෙක් නම් , </h5><br />
-                <Input 
-                  type={"email"}
-                  name={"email"}
-                  placeholder={"Enter email"}
-                />
+                <div className={`form-group`}>
+                  <div className={`col-sm-10`}>
+                    <input 
+                      type={'email'} 
+                      className={`form-control`} 
+                      name='email' 
+                      placeholder='Enter your email' 
+                      required 
+                      onChange={(e) => setEmail(e.target.value)} 
+                    />
+                  </div>
+                </div>
 
                 <div className={`form-group`}>
                   <div className={`col-sm-10`}>
-                    <input type={passwordVisible ? "text" : "password"} className={`form-control`} name='password' placeholder="Enter password" required /><br />
+                    <input type={passwordVisible ? "text" : "password"} className={`form-control`} name='password' placeholder="Enter password" required onChange={(e)=>setPassword(e.target.value)} /><br />
                     <input type="checkbox" onClick={ShowPassword} /> Show Password
                   </div>
                 </div>
+
+                <p>{message}</p>
 
                 <div className={`form-group`}>
                   <div className={`col-sm-offset-2 col-sm-10 ${style.btn}`}>
