@@ -4,39 +4,29 @@
 let timeLineElements = [
   {
     id: 1,
-    description: "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
-    date: "Aug 27",  
-
-    
+    description: "Friday - 8.00 pm - 10.30 pm",
+    date: "2024 A/L Paper Class",
   },
 
   {
     id: 2,
-    description: "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
-    date: "Aug 27",
-    icon: "work",
+    description: "Saturday - 7.00 pm - 10.00 pm",
+    date: "2024 A/L Theory Class",
+    icon: "time",
   },
   {
     id: 3,
-    description: "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
-    date: "Aug 27",
+    description: "Sunday - 3.00 pm - 6.00 pm",
+    date: "2025 A/L Theory Group Class",
     icon: "work",
   },
   {
     id: 4,
-    description: "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
-    date: "Aug 27",
-    icon: "school",
+    description: "Sunday - 7.00 pm - 10.00 pm",
+    date: "2025 A/L Open Class",
+    icon: "time",
   },
-  {
-    id: 5,
-    description: "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
-    date: "Aug 27",
-    icon: "school",
-  },
-
-
-]
+];
 
 
 export default timeLineElements;

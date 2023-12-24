@@ -10,17 +10,33 @@ export const Header = () => {
   return (
     <div>
       <Navbar expand="lg" className="bg-body-white navContainer mainContainer">
-        <Container className='text-center '>
-          <Navbar.Brand href="#home" className='ml-5'>SpdChem</Navbar.Brand>
+        <Container className="text-center">
+          <Navbar.Brand href="#home" className="brand ml-5">
+            SpdChem
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="LinkContainer ms-auto "> 
-              <Link to="/"><Nav.Link href="#home" className='text-black navLinks '>Home</Nav.Link></Link>
-              <Nav.Link href="#ClassDetails" className=' text-black navLinks'>Class Details</Nav.Link>
-              <Nav.Link href="#Classes" className='text-black navLinks'>Classes</Nav.Link>
-              <Nav.Link href="#About" className='text-black navLinks'>About</Nav.Link>
-              <Link to="/login"><button className='loginBtn rounded '>Login</button></Link>
-              <Link to="/register"><button className=' RegisterBtn rounded '>Register</button></Link>
+            <Nav className="LinkContainer ms-auto ">
+              <Link to="/">
+                <Nav.Link href="#home" className="text-black navLinks ">
+                  Home
+                </Nav.Link>
+              </Link>
+              <Nav.Link href="#ClassDetails" className=" text-black navLinks">
+                Class Details
+              </Nav.Link>
+              <Nav.Link href="#Classes" className="text-black navLinks">
+                Classes
+              </Nav.Link>
+              <Nav.Link href="#About" className="text-black navLinks">
+                About
+              </Nav.Link>
+              <Link to="/login">
+                <button className="loginBtn rounded ">Login</button>
+              </Link>
+              <Link to="/register">
+                <button className=" RegisterBtn rounded ">Register</button>
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -37,7 +53,6 @@ export const Header = () => {
         <h4 id="scrollspyHeading5">Fifth heading</h4>
         <p>...</p>
       </div> */}
-
     </div>
-  )
+  );
 }

@@ -1,15 +1,25 @@
 * {
   box-sizing: border-box;
 }
+
+a:hover {
+    text-decoration: none;
+}
 .mainContainer {
+  overflow-y: hidden;
   height: 50px;
   padding-bottom: 20px;
   margin-top: 10px;
 }
 
 .navbar-toggler-icon {
-  width: 20px;
+  width: 30px;
   height: 30px;
+}
+
+.brand {
+  margin-right: 30%;
+  font-size: 20px;
 }
 
 .navbar-toggler {
@@ -29,6 +39,7 @@
 
 .loginBtn,
 .RegisterBtn {
+  margin-top: 5px;
   width: auto;
   height: 40px;
   padding: 3px 10px;
@@ -51,15 +62,12 @@
   color: white;
 }
 
-.RegisterBtn:hover {
-  background-color: rgba(1, 92, 146, 0.8);
-}
 
 .navLinks {
   font-size: 18px;
   width: auto;
   margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 15px;
   transition: transform 0.3s;
 }
 
@@ -82,6 +90,18 @@
     font-weight: 500;
   }
 }
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .brand {
+  margin-right: 20%;
+}
+
+.navLinks {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+}
+
 
 /*Mobile Devices*/
 @media (max-width: 992px) {

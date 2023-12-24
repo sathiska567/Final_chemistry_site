@@ -44,7 +44,7 @@ body {
     trasition: 0.5s;
     filter: contrast(100%) brightness(0.9);
   }
-
+  
   @media (max-width: 768px) {
     .trapezoidClasses {
         height: 80vh;
