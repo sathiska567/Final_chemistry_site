@@ -9,7 +9,7 @@ const JWT = require("jsonwebtoken")
 const registerController = async(req,res)=>{
     try {
 
-      const {name , email,password} = req.body
+      const {name,email,password} = req.body
 
       if(!name){
         res.status(404).send({
@@ -71,15 +71,16 @@ const loginController = async(req,res)=>{
     try {
 
       const {email,password} = req.body
+      console.log(email,password);
 
       if(!email){
-        res.status(404).send({
+        return res.status(404).send({
             success : false,
             message : "Please enter your email",        
          })
       }
       if(!password){
-        res.status(404).send({
+        return res.status(404).send({
             success : false,
             message : "Please enter your password",        
          })
@@ -89,7 +90,7 @@ const loginController = async(req,res)=>{
       const user = await userModel.findOne({email})
 
       if(!user){
-        res.status(400).send({
+        return res.status(400).send({
           success : false,
           message : "Please enter your correct email"     
        })
@@ -100,7 +101,7 @@ const loginController = async(req,res)=>{
 
 
   if(!compairPassword){
-    res.status(400).send({
+    return res.status(400).send({
       success : false,
       message : "Please enter your correct password"     
    })
@@ -120,12 +121,6 @@ const loginController = async(req,res)=>{
     },
     token
   })
-
-  res.status(200).send({
-    success : true,
-    message : "Login successfull"  
-
- })
       
     } catch (error) {
         res.status(400).send({
@@ -138,5 +133,10 @@ const loginController = async(req,res)=>{
 }
 
 
-module.exports = {registerController , loginController}
+const getAllUserController = async(req,res)=>{
+
+}
+
+
+module.exports = {registerController , loginController,getAllUserController}
 

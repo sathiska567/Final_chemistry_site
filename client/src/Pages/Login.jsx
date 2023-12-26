@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import style from "./Pages.module.css"
 import Button from '../components/Button/Button';
 import Sub from '../components/SubSection/Sub';
@@ -12,6 +12,9 @@ const Login = () => {
   const [password , setPassword] = useState('')
   const [message , setMessage] = useState('')
   const history = useNavigate();
+  const location = useLocation();
+
+  console.log(location);
 
   const handleSubmit = async(e) => {
     e.preventDefault()
@@ -21,13 +24,16 @@ const Login = () => {
     try {
       const response = await axios.post('http://localhost:8080/api/v1/auth/login' , {email : email , password : password})
       console.log(response.data);
+
+      localStorage.setItem("token",response.data.token)
       setMessage(response.data.message)
+
       history('/')
     } 
     
     catch (error) {
        console.log(error);
-       alert(error)
+       alert("Error occure while doing registration")
     }   
 
   }
@@ -55,8 +61,6 @@ const Login = () => {
               <br /><br />
 
               <form onSubmit={(e) => handleSubmit(e)}>
-
-
                 <h5>දැනටමත් ලියාපදිංචි සිසුවෙක් නම් , </h5><br />
                 <div className={`form-group`}>
                   <div className={`col-sm-10`}>

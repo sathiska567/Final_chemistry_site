@@ -25,22 +25,14 @@ const Login = () => {
 
       console.log(name,email,password);
       const response = await axios.post('http://localhost:8080/api/v1/auth/register',{ name :name, email:email, password:password })
-      console.log(response.data);
-
-      const _id = response.data.user._id
-      console.log(_id);
-
       setMessage(response.data.message)
-      history('/login')
+      history('/login', { state: { record: response.data } });
       alert("Registration successful")
-
-      return _id
-
     } 
     
     catch (error) {
       console.log(error);
-      alert('Error occurred during registration')
+       alert('Error occurred during registration')
     }
   }
 
